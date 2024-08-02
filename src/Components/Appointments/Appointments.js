@@ -8,6 +8,7 @@ function Appointments({ appointments, deleteAppointment }) {
             <Card
                 pet={appointment.pet}
                 date={appointment.date}
+                time={appointment.time}
                 id={appointment.id}
                 key={appointment.id}
                 deleteAppointment={deleteAppointment}
