@@ -25,12 +25,16 @@ function App() {
       console.log('Error posting appointment')
     })
   }
+const deleteAppointment = (id) => {
+  const filteredAppointments = appointments.filter((appointment) => appointment.id !== id)
+  setAppointment(filteredAppointments)
+}
 
   return (
     <div className="App">
      <h1>Appointments!</h1>
      <Form addAppointment={addAppointment}/>
-     <Appointments appointments={appointments}/>
+     <Appointments appointments={appointments} deleteAppointment={deleteAppointment}/>
     </div>
   );
 }
