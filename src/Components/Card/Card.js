@@ -10,3 +10,5 @@ const Card = ({ pet, date, id, time, deleteAppointment }) => {
         </div>
     )
 }
+
+export default Card
