@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from "../Card/Card"
+import './Appointments.css'
 
 function Appointments({ appointments, deleteAppointment }) {
     const appointmentCards = appointments.map(appointment => {

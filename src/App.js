@@ -15,10 +15,21 @@ function App() {
       }
     })
   }, [])
+
+  function addAppointment(newAppointment) {
+    postAppointment(newAppointment)
+    .then(postedAppointment => {
+      setAppointment([...appointments, postedAppointment])
+    })
+    .catch(error => {
+      console.log('Error posting appointment')
+    })
+  }
+
   return (
     <div className="App">
      <h1>Appointments!</h1>
-     <Form />
+     <Form addAppointment={addAppointment}/>
      <Appointments appointments={appointments}/>
     </div>
   );

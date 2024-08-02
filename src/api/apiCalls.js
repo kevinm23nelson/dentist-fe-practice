@@ -8,7 +8,7 @@ export const getAppointments = () => {
 }
 
 export const postAppointment = (newAppointment) => {
-    return fetch('http://localhost:3001/api/appointments', {
+    return fetch('http://localhost:3001/appointments', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './Form.css'
 
 function Form({addAppointment}) {
     const [pet, setPet] = useState("")
@@ -13,7 +14,7 @@ function Form({addAppointment}) {
             pet,
             date,
             time
-        }
+        };
         addAppointment(newAppointment)
         clearInput()
     }
@@ -26,21 +27,21 @@ function Form({addAppointment}) {
 
     return (
         <form>
-            <input
+            <input required
                 type='text'
                 placeholder='Pet Name'
                 name='pet'
                 value={pet}
                 onChange={event => setPet(event.target.value)}
             />
-            <input
+            <input required
                 type='text'
-                placeholder='Date'
+                placeholder='Date (Month, Day)'
                 name='date'
                 value={date}
                 onChange={event => setDate(event.target.value)}
             />
-            <input
+            <input required
                 type='text'
                 placeholder='Time'
                 name='time'
